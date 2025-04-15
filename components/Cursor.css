@@ -11,9 +11,10 @@
 
 .dot {
     position: absolute;
-    width: 6px;
-    height: 6px;
+    width: 9px;
+    height: 9px;
     background-color: #f9f4dc;
+    outline:0.8px dotted grey;
     border-radius: 0; /* ✅ 方形像素感 */
     mix-blend-mode: difference;
     will-change: transform; /* 提高性能 */
@@ -27,16 +28,16 @@
 
 /* 主点基础样式 */
 .dot-main {
-    transition: transform 0.15s ease, background-color 0.15s ease;
+    transition: transform 0.05s ease, background-color 0.05s ease;
   }
   
 
   .dot-left,
   .dot-right {
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
     opacity: 0.8;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.05s ease-in-out;
   }
 
   

@@ -26,16 +26,16 @@ const Cursor = () => {
   
   useEffect(() => {
     const { x, y } = coords;
-    const scale = isHovering ? 1.5 : 1;
+    const scale = isHovering ? 2 : 1;
   
     if (dotMain.current) {
       dotMain.current.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
     }
     if (dotLeft.current) {
-      dotLeft.current.style.transform = `translate(${x - 10}px, ${y + 8}px)`;
+      dotLeft.current.style.transform = `translate(${x - 12}px, ${y + 12}px)`;
     }
     if (dotRight.current) {
-      dotRight.current.style.transform = `translate(${x + 10}px, ${y + 8}px)`;
+      dotRight.current.style.transform = `translate(${x + 12}px, ${y + 12}px)`;
     }
   }, [coords, isHovering]);
   
