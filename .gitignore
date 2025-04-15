@@ -5,3 +5,6 @@ node_modules/
 .env
 public/contents/*
 !public/contents/.gitkeep
+
+public/sidebarmedia/*
+!public/sidebarmedia/.gitkeep
