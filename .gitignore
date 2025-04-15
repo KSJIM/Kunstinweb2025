@@ -3,8 +3,5 @@ node_modules/
 .DS_Store
 *.log
 .env
-public/contents/*
-!public/contents/.gitkeep
 
-public/sidebarmedia/*
-!public/sidebarmedia/.gitkeep
+!public/contents/.gitkeep
