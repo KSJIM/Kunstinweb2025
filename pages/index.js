@@ -255,7 +255,6 @@ activeColor;
       Currently,I’m exploring and creating in the fields of
       computational design, generative design, and digital fabrication.
       <br />
-      <br />
       I’m also currently enrolled in the MS in Human-Computer Interaction at the ATLAS Institute. 
       
       <a
