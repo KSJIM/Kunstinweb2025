@@ -1,0 +1,57 @@
+#cursor {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999 !important;  /* ← 加强优先级 */
+  }
+  
+
+
+
+.dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #f9f4dc;
+    border-radius: 0; /* ✅ 方形像素感 */
+    mix-blend-mode: difference;
+    will-change: transform; /* 提高性能 */
+  }
+
+  #cursor.hovering .dot-left,
+#cursor.hovering .dot-right,
+#cursor.hovering .dot-main {
+  background-color: black;
+}
+
+/* 主点基础样式 */
+.dot-main {
+    transition: transform 0.15s ease, background-color 0.15s ease;
+  }
+  
+
+  .dot-left,
+  .dot-right {
+    width: 4px;
+    height: 4px;
+    opacity: 0.8;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  
+  /* hover 状态变大变黑 */
+  .cursor-hover .dot-main {
+    transform: scale(2);
+    background-color: black;
+    
+  }
+  
+  
+
+  /* hover 状态下左右点隐藏 */
+  .cursor-hover .dot-left,
+  .cursor-hover .dot-right {
+    opacity: 0;
+  }
+  

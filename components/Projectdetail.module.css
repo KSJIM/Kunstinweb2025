@@ -1,0 +1,82 @@
+.project-detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  padding: 2vw;
+  background-color: #f4f4f4; /* 可自定义或移除 */
+}
+
+.project-main-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.project-info-grid {
+  display: flex;
+  gap: 5%;
+  margin-top: 2vh;
+}
+
+.info-labels, .info-contents {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vh;
+}
+
+.info-labels p {
+  font-family: 'ITCAvantGardeStd-Md', sans-serif;
+  color: #999;
+  font-size: 1em;
+  text-align: left;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+}
+
+.info-contents p {
+  font-family: 'ITCAvantGardeStd-Md', sans-serif;
+  color: #1c1c1c;
+  text-align: right;
+  font-size: 1.05em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.project-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  margin-top: 2vh;
+}
+
+.project-detail-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 3px;
+}
+
+.project-section {
+  display: flex;
+  gap: 5%;
+  margin-top: 3vh;
+  align-items: flex-start;
+}
+
+.section-label {
+  flex: 1;
+  font-weight: bold;
+  font-size: 1.2em;
+  font-family: 'ITCAvantGardeStd-Md';
+  color: #222;
+}
+
+.section-content {
+  flex: 1;
+  font-size: 1em;
+  line-height: 1.6;
+  color: #333;
+  font-family: 'ITCAvantGardeStd-Md';
+}

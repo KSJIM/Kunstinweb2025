@@ -1,0 +1,734 @@
+/* ===== Global Reset ===== */
+* {
+  cursor: none !important;
+}
+
+@font-face {
+  /* 字体1 */
+  font-family: 'Milligram';
+  src: url('/fonts/Milligram-Heavy.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Milligram';
+  src: url('/fonts/MilligramText-Book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Milligram';
+  src: url('/fonts/MilligramText-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MilligramMacro';
+  src: url('/fonts/MilligramMacro-Heavy.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MilligramMacro';
+  src: url('/fonts/MilligramMacro-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'DrukWide';
+  src: url('/fonts/druk/DrukWide-Heavy-Trial.otf') format('opentype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'DrukCond';
+  src: url('/fonts/druk/DrukCond-Super-Trial.otf') format('opentype');
+  font-weight: 400;
+}
+
+
+
+
+@font-face {
+  font-family: 'Maelstrom';
+  src: url('/fonts/Maelstrom Sans Bold.otf') format('opentype');
+  font-weight: normal;
+}
+
+
+
+
+
+
+
+
+/* 字体2 */
+@font-face {
+  font-family: 'ITCAvantGardeStd-Md';
+  src: url('/fonts/ITCAvantGardeStd-Md.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* 字体3 */
+@font-face {
+  font-family: 'MNewsPlantin';
+  src: url('/fonts/MNewsPlantin.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* 字体4 */
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('/fonts/helveticaneue/HelveticaNeueMedium.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Diatype';
+  src: url('/fonts/diatype/ABC Diatype-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Diatype';
+  src: url('/fonts/diatype/ABC Diatype Bold.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+  background: white;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+
+}
+
+/* ===== Sidebar ===== */
+/* 第一栏 */
+.sidebar {
+  width: 38.2vw;
+  background:black;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 1.2vw;
+  transition: flex-grow 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+
+  border-right: 1px dotted #f4f4f4 ;
+}
+
+/* 压缩时 状态 */
+.container.detail-open .sidebar {
+  width: flex;
+  font-size: flex;
+  transition: flex-grow 0.4s ease-in-out;
+}
+
+.container.detail-open .menu-bar {
+  width: flex;
+  font-size: 0.95vw;
+  transition: flex-grow 0.4s ease-in-out;
+  
+
+}
+
+
+
+/* 标题栏*/
+.sidebar-top {
+  flex: 0 0 auto; 
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 2%;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  
+}
+
+.site-title {
+  
+  padding-left: 1%;
+  font-family: 'MilligramMacro';
+  color: #f9f4dc;
+  font-weight: 900;
+  font-size: 3.3em;
+  line-height: 100%;
+  text-transform: uppercase;
+  white-space: normal;  
+  word-break: break-word;
+}
+
+
+/* 菜单栏 */
+
+.sidebar-menu {
+  display: flex;
+  align-items: stretch;
+  height: auto;                   /* ⬅ 控制总高 */
+  border-top: 1px dotted white;
+  border-bottom: 1px dotted white;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-bar {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-right: 1px dotted  #f9f4dc;
+  height: 100%; 
+  box-sizing: border-box;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+
+}
+
+  
+
+/* 激活的 bar 拉宽 变色 b */
+.menu-bar.active {
+  height:100%;
+  flex-grow: 2.8;
+}
+
+/* 菜单链接文字样式 */
+.menu-link {
+  font-family: 'DrukWide-Heavy-Trial', sans-serif;
+  font-size: 2em;
+  color: #f9f4dc;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform-origin: center;
+  transform: scaleX(1);
+  line-height: 1;      /* ✅ 避免撑高行高 */
+  padding-top:1%; 
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+
+}
+
+/* 被选中拉宽字体 */
+.menu-bar.active .menu-link {
+  transform: scaleX(1.3);
+}
+
+
+/* 其他压缩字体 */
+.menu-bar:not(.active) .menu-link {
+  transform: scaleX(0.75);
+  opacity: 0.85;
+}
+
+.menu-bar:last-child {
+  border-right: none;
+}
+
+
+
+
+
+/* 左侧部分下半部分内容 */
+
+.sidebar-bottom {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 文字内容仍靠底部 */
+  align-items: flex-start;
+  padding-left: 2%;
+  padding-right: 0.2cm;
+  padding-bottom: 1vh;
+  overflow-y: auto;        /* ✅ 允许竖直滚动 */
+  max-height: 100%; 
+}
+
+
+.sidebar-video {
+  margin-top: 4%;
+  outline: 1px dotted #f9f4dc;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  justify-content: flex-start;
+  margin-bottom: 1em; /* ⬅ 与文字的间距 */
+}
+
+
+
+.sidebar-bottom p {
+ font-family: 'ITCAvantGardeStd-Md';
+ color:#ccccd6;
+  font-size: 0.9em;
+  margin: 0;
+  line-height: 1.4;
+  align-self: left;      /* ✅ 保证文字在 bar 底部 */
+}
+
+
+
+.sidebar-spacer {
+  flex-grow: 1;   /* 🚀 这个占据中间弹性空隙 */
+}
+
+
+
+
+.bottom-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  flex: 1
+}
+
+
+.sidebar-profile {
+  outline:1px dotted #f9f4dc;
+  padding:0;
+  margin-top: 3%;
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1em;
+ border-radius:100%;
+}
+
+
+
+
+.resume-link {
+  padding-left: 2%;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #ccccd6;
+  transition: color 0.3s;
+}
+
+.resume-link:hover {
+  color: white;
+}
+
+
+  /* others 照片栏*/
+.photo-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  width: 100%;
+
+  padding-top: 2%;
+}
+
+.photo-item {
+  width: 99%;            /* 填满 sidebar (考虑左右2% padding) */
+  height: auto;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+/* ===== 中间主栏 ===== */
+.main {
+  width: 61.8vw;
+  
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 0.5%;
+  overflow-y: auto;
+  font-size: 1.2vw;
+  transition: all 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+
+}
+
+.container.detail-open .main {
+  transition: all 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+  width: 18vw;
+}
+
+/* 项目方框 */
+
+
+.project-image-container {
+  width: 100%;
+  aspect-ratio: 7 / 5; /* 框的固定比例 */
+  outline: 2px dotted #f9f4dc;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2vw;
+  cursor: pointer;
+  border-radius: 0.5%;
+  
+  
+}
+
+.project-image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 0.5s ease, transform 0.4s ease;
+}
+
+.image-base {
+  z-index: 1;
+  opacity: 1;
+}
+
+.image-hover {
+  z-index: 2;
+  opacity: 0;
+}
+
+
+
+
+
+
+/* Hover 激活彩色图，同时触发放大 */
+.project-image-container:hover .image-hover {
+  opacity: 1;
+  transform: scale(1.05);
+  transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project-image-container:hover .image-base {
+  opacity: 0;
+  transform: scale(1.05);
+  transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== 第三栏 Detail ===== */
+.detail {
+  width: 0;
+  overflow: hidden;
+  background: white;
+  font-size: 1.2vw;
+  transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+
+}
+
+.container.detail-open .detail {
+  width: 61.8vw;
+  padding: 0.5%;
+  overflow-y: auto;
+  
+}
+
+.close-btn {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+
+
+
+/* ===== 内容展示 ===== */
+
+/* ===== 通用排版 ===== */
+.project-detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  background-color: white;
+}
+
+.project-main-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* ===== 大致介绍 ===== */
+
+.project-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* 左右比 */
+  row-gap: 2vh;
+  column-gap: 3vw;
+  align-items: start;
+  margin-top: 2vh;
+}
+
+/* 直接用于 label 和 value */
+.info-label {
+  text-transform: uppercase;
+  font-family: 'Diatype';
+  color: #777;
+  font-size: 0.8em;
+  font-weight: 200;
+  text-align: left;
+}
+
+.info-value {
+  font-family: 'Diatype';
+  color: #222;
+  text-align: right;
+  font-size: 0.8em;
+  line-height: 1.45;
+  font-weight: 200;
+  white-space: normal;
+}
+
+
+.tight-value {
+  line-height: 1.3;
+  margin: 0;                /* 🚫 清除默认 margin */
+  padding: 0;  
+  text-align: right;
+  white-space: normal;
+}
+
+
+
+
+
+
+
+
+.project-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  margin-top: 1.5vh;
+}
+
+.project-detail-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+
+/* ===== 具体介绍 ===== */
+.project-section {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  column-gap: 3vw;
+  row-gap: 1.2vh;
+  margin-top: 2%;
+  margin-bottom: 10%;
+  align-items: start;
+}
+
+.section-label {
+  font-weight: 900;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;
+  font-family: 'Diatype';
+}
+
+.section-content {
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 1.6;
+  font-family: 'Diatype';
+  color: #222;
+  text-align: left;
+}
+
+/* ========= 图片排布统一容器 ========= */
+.section-imageGroup {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  outline: 2px dotted #f9f4dc;
+}
+
+/* === 单图布局 === */
+.section-imageGroup.single {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+/* === 2x2 Grid === */
+.section-imageGroup.grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5vw;
+}
+
+/* === 3x2 Grid === */
+.section-imageGroup.grid-3x2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5vw;
+}
+
+/* === Carousel 滚动栏 === */
+.section-imageGroup.carousel {
+  display: flex;
+  height:flex;
+  overflow-x: auto;
+  gap: 1vw;
+  padding-bottom: 1vh;
+  scrollbar-width: none;
+}
+.section-imageGroup.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* === 所有图像通用样式 === */
+.section-imageGroup img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  flex: 0 0 auto;
+  height: auto;
+  
+}
+
+/* 专门为 carousel 设置高度（如横条效果） */
+.section-imageGroup.carousel img {
+  width: auto; 
+  height: 22vw;
+  object-fit: contain;
+}
+
+
+
+/* ===== B8 ===== */
+.B8-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+}
+
+.B8-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1%;
+}
+
+
+/* ===== terra ===== */
+.terra-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+}
+
+.terra-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1%;
+}
+
+
+/* ===== sternal ===== */
+
+.sternal-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+  
+}
+
+.sternal-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1%;
+}
+
+
+
+
+
+
+
+
+/* ===== 滚动条 ===== */
+/* Chrome, Safari */
+::-webkit-scrollbar {
+  width: 2.5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a7a8bd;
+  border-radius: 4px;
+}
+
+/* Firefox */
+.scrollable-element {
+  scrollbar-color: rgba(255,255,255,0.25) transparent;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 2.5px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: rgba(255,255,255,0.25);
+  border-radius: 10px;
+}
+
+
+
+
