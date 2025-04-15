@@ -310,7 +310,8 @@ body, html {
   outline:1px dotted #f9f4dc;
   padding:0;
   margin-top: 3%;
-  width: 300px;
+  width:100%;
+  max-width: 300px;
   height: auto;
   object-fit: contain;
   margin-bottom: 1em;
