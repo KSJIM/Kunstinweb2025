@@ -94,14 +94,14 @@
 
 @font-face {
   font-family: 'Diatype';
-  src: url('/fonts/diatype/ABC Diatype-Regular.otf') format('opentype');
+  src: url('/fonts/Diatype/ABC Diatype-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Diatype';
-  src: url('/fonts/diatype/ABC Diatype Bold.otf') format('opentype');
+  src: url('/fonts/Diatype/ABC Diatype Bold.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
 }
