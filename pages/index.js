@@ -109,7 +109,7 @@ const renderProjectContent = () => {
         {Array.from({ length: 11 }, (_, i) => (
           <img
             key={i}
-            src={`/contents/terra/${12 + i}.jpg`}
+            src={`/contents/Terra/${12 + i}.jpg`}
             alt={`Terra ${12 + i}`}
             className="terra-image"
           />
