@@ -3,7 +3,7 @@ const projectsData = {
       
     'L-Shufa': {
       title: 'L-Shufa',
-      mainImage: '/contents/L-shufa/1.png',
+      mainImage: '/contents/L-shufa/1.webp',
       
       info: [
         { label: 'Project', value: 'L-Cal' },
@@ -20,7 +20,7 @@ const projectsData = {
 sections: [
     {type: 'imageGroup',
         layout: 'carousel',
-        images: ['/contents/L-shufa/i1.jpg', '/contents/L-shufa/i2.jpg','/contents/L-shufa/i3.png','/contents/L-shufa/i4.jpg']
+        images: ['/contents/L-shufa/i1.webp', '/contents/L-shufa/i2.webp','/contents/L-shufa/i3.webp','/contents/L-shufa/i4.webp']
       },
 
 
@@ -32,11 +32,11 @@ sections: [
 
     {type: 'imageGroup',
         layout: 'grid-2x2',
-        images: ['/contents/L-shufa/l5.png', '/contents/L-shufa/l6.png','/contents/L-shufa/l7.png','/contents/L-shufa/l8.png']
+        images: ['/contents/L-shufa/l5.webp', '/contents/L-shufa/l6.webp','/contents/L-shufa/l7.webp','/contents/L-shufa/l8.webp']
       },
       {type: 'imageGroup',
         layout: 'grid-3x2',
-        images: ['/contents/L-shufa/l9.png', '/contents/L-shufa/l10.png','/contents/L-shufa/l11.png','/contents/L-shufa/l12.png','/contents/L-shufa/l13.png','/contents/L-shufa/l14.png']
+        images: ['/contents/L-shufa/l9.webp', '/contents/L-shufa/l10.webp','/contents/L-shufa/l11.webp','/contents/L-shufa/l12.webp','/contents/L-shufa/l13.webp','/contents/L-shufa/l14.webp']
       },
 
 
@@ -48,7 +48,7 @@ sections: [
     {
         type: 'imageGroup',
         layout: 'grid-2x2',
-        images: ['/contents/L-shufa/l1.png', '/contents/L-shufa/l2.png','/contents/L-shufa/l3.png','/contents/L-shufa/l4.png']
+        images: ['/contents/L-shufa/l1.webp', '/contents/L-shufa/l2.webp','/contents/L-shufa/l3.webp','/contents/L-shufa/l4.webp']
       },
 
 
@@ -69,7 +69,7 @@ sections: [
 
    'Caltyp': {
         title: 'Caltyp',
-        mainImage: '/contents/Caltyp/1.png',
+        mainImage: '/contents/Caltyp/1.webp',
         
         info: [
           { label: 'Project', value: 'Caltyp' },
@@ -86,7 +86,7 @@ sections: [
   sections: [
       {type: 'imageGroup',
           layout: 'carousel',
-          images: ['/contents/L-shufa/i1.jpg', '/contents/L-shufa/i2.jpg','/contents/L-shufa/i3.png','/contents/L-shufa/i4.jpg']
+          images: ['/contents/L-shufa/i1.webp', '/contents/L-shufa/i2.webp','/contents/L-shufa/i3.webp','/contents/L-shufa/i4.webp']
         },
   
   
@@ -98,11 +98,11 @@ sections: [
   
       {type: 'imageGroup',
           layout: 'grid-2x2',
-          images: ['/contents/L-shufa/l5.png', '/contents/L-shufa/l6.png','/contents/L-shufa/l7.png','/contents/L-shufa/l8.png']
+          images: ['/contents/L-shufa/l5.webp', '/contents/L-shufa/l6.webp','/contents/L-shufa/l7.webp','/contents/L-shufa/l8.webp']
         },
         {type: 'imageGroup',
           layout: 'grid-3x2',
-          images: ['/contents/L-shufa/l9.png', '/contents/L-shufa/l10.png','/contents/L-shufa/l11.png','/contents/L-shufa/l12.png','/contents/L-shufa/l13.png','/contents/L-shufa/l14.png']
+          images: ['/contents/L-shufa/l9.webp', '/contents/L-shufa/l10.webp','/contents/L-shufa/l11.webp','/contents/L-shufa/l12.webp','/contents/L-shufa/l13.webp','/contents/L-shufa/l14.webp']
         },
   
   
@@ -114,7 +114,7 @@ sections: [
       {
           type: 'imageGroup',
           layout: 'grid-2x2',
-          images: ['/contents/L-shufa/l1.png', '/contents/L-shufa/l2.png','/contents/L-shufa/l3.png','/contents/L-shufa/l4.png']
+          images: ['/contents/L-shufa/l1.webp', '/contents/L-shufa/l2.webp','/contents/L-shufa/l3.webp','/contents/L-shufa/l4.webp']
         },
   
   

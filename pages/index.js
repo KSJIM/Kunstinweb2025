@@ -11,32 +11,32 @@ const projects = [
   {
     id: 'Caltyp',
     title: 'Caltyp',
-    image0: '/mainpics/Calityp0.png',
-    image1: '/mainpics/Calityp1.png',
+    image0: '/mainpics/Calityp0.webp',
+    image1: '/mainpics/Calityp1.webp',
   },
   {
     id: 'L-Shufa',
     title: 'L-Shufa',
-    image0: '/mainpics/Lsystem0.png',
-    image1: '/mainpics/Lsystem1.png',
+    image0: '/mainpics/Lsystem0.webp',
+    image1: '/mainpics/Lsystem1.webp',
   },
   {
     id: 'B8',
     title: 'B8',
-    image0: '/mainpics/B80.png',
-    image1: '/mainpics/B81.png',
+    image0: '/mainpics/B80.webp',
+    image1: '/mainpics/B81.webp',
   },
   {
     id: 'Sternal',
     title: 'Sternal',
-    image0: '/mainpics/Sternal0.png',
-    image1: '/mainpics/Sternal1.png',
+    image0: '/mainpics/Sternal0.webp',
+    image1: '/mainpics/Sternal1.webp',
   },
   {
     id: 'Terra',
     title: 'Terra',
-    image0: '/mainpics/Terra0.png',
-    image1: '/mainpics/Terra1.png',
+    image0: '/mainpics/Terra0.webp',
+    image1: '/mainpics/Terra1.webp',
   },
 ];
 
@@ -94,7 +94,7 @@ const renderProjectContent = () => {
         {Array.from({ length: 1 }, (_, i) => (
           <img
             key={i}
-            src={`/contents/B8/${1 + i}.png`}
+            src={`/contents/B8/${1 + i}.webp`}
             alt={`B8 ${1 + i}`}
             className="B8-image"
           />
@@ -109,7 +109,7 @@ const renderProjectContent = () => {
         {Array.from({ length: 11 }, (_, i) => (
           <img
             key={i}
-            src={`/contents/Terra/${12 + i}.jpg`}
+            src={`/contents/Terra/${12 + i}.webp`}
             alt={`Terra ${12 + i}`}
             className="terra-image"
           />
@@ -124,7 +124,7 @@ const renderProjectContent = () => {
         {Array.from({ length: 8 }, (_, i) => (
           <img
             key={i}
-            src={`/contents/Sternal/${23 + i}.jpg`}
+            src={`/contents/Sternal/${23 + i}.webp`}
             alt={`Sternal ${23 + i}`}
             className="sternal-image"
           />
@@ -244,7 +244,7 @@ activeColor;
         {activeMenu === 'ABOUT' && (
   <div className="bottom-content">
 
-<img src="/profile/profile7.png" alt="Profile" className="sidebar-profile" />
+<img src="/profile/profile7.webp" alt="Profile" className="sidebar-profile" />
     
 <div className="sidebar-spacer" />
 
@@ -293,7 +293,7 @@ activeColor;
     {Array.from({ length: 6 }, (_, i) => (
       <img
         key={i}
-        src={`/otherpics/photos/${i + 1}.jpg`}
+        src={`/otherpics/photos/${i + 1}.webp`}
         alt={`photo ${i + 1}`}
         className="photo-item"
       />

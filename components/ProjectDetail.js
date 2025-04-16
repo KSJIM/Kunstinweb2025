@@ -1,5 +1,6 @@
 // components/ProjectDetail.js
 import React from 'react';
+import Image from 'next/image';
 
 const ProjectDetail = ({ data }) => {
   const {
