@@ -6,6 +6,14 @@ import projectsData from '../data/projectData';
 import ProjectDetail from '../components/ProjectDetail';
 {console.log('render ProjectDetail')}
 
+//作品分类
+
+
+import styles from '../components/CategoryHeader.module.css';
+
+
+
+
 //每个项目标题和封面图
 const projects = [
   {
@@ -46,7 +54,7 @@ const projectColors = {
   'Caltyp':'#36292f',
   'L-Shufa': '#cdd1d3',
   'B8': '#9e9d08',
-  'Sternal': '#f0fcf4',
+  'Sternal': '#346c9c',
   'Terra': '#daa45a',
 };
 
@@ -64,6 +72,8 @@ export default function Home() {
 
 
 
+  
+
   //视频播放
   const sidebarVideos = [ '/sidebarmedia/A2.mp4',];
   const [currentVideo, setCurrentVideo] = useState(sidebarVideos[0]);
@@ -78,8 +88,25 @@ export default function Home() {
   }, []);
 
 
+//项目分类
 
+const mainRef = useRef();  // 用于控制整个 scroll 区
+const categoryRefs = {
+  'Computational Art and Design': useRef(null),
+  'Industrial and Product Design': useRef(null),
+  'Creative Coding': useRef(null),
+  'Communication Design': useRef(null),
+};
 
+const handleCategoryClick = (category) => {
+  if (categoryRefs[category]?.current && mainRef?.current) {
+    const offsetTop = categoryRefs[category].current.offsetTop;
+    mainRef.current.scrollTo({
+      top: offsetTop,
+      behavior: 'smooth'
+    });
+  }
+};
 
 
  //项目detail
@@ -191,11 +218,30 @@ activeColor;
   const openDetail = (project) => {
     setActiveProject(project);
     setShowDetail(true);
-  };
+ // 滚动到点击的项目位置
+ setTimeout(() => {
+  const element = document.querySelector(`[data-project="${project}"]`);
+  if (element && mainRef.current) {
+    mainRef.current.scrollTo({
+      top: element.offsetTop,
+      behavior: 'smooth',
+    });
+  }
+}, 100);
+};
 
   const closeDetail = () => {
     setShowDetail(false);
     setActiveProject(null);
+    setTimeout(() => {
+      const element = document.querySelector(`[data-project="${project}"]`);
+      if (element && mainRef.current) {
+        mainRef.current.scrollTo({
+          top: element.offsetTop,
+          behavior: 'smooth',
+        });
+      }
+    }, 100);
   };
 
  
@@ -310,35 +356,51 @@ activeColor;
 
 
       {/* === Project Gallery === */}
+      
       <div
+  ref={mainRef}
   className="main"
   style={{
     backgroundColor: currentBgColor,
     transition: 'background-color 0.4s ease',
   }}
 >
-  {projects.map((project) => (
-    <div
-    key={project.id}
-    className="project-image-container"
-    onClick={() => openDetail(project.title)}
-    onMouseEnter={() => setHoveredProject(project.title)}
-    onMouseLeave={() => setHoveredProject(null)}
-  >
-    <div className="project-image-wrapper">
-      <img
-        src={project.image0}
-        alt={`${project.title} grayscale`}
-        className="project-image image-base"
-      />
-      <img
-        src={project.image1}
-        alt={`${project.title} color`}
-        className="project-image image-hover"
-      />
+  {Object.entries({
+    'Computational Art and Design': projects.slice(0, 2),
+    'Industrial and Product Design': projects.slice(2),
+    // 后续你可继续添加分类
+  }).map(([category, categoryProjects]) => (
+    <div key={category} ref={categoryRefs[category]}>
+      <div
+        className={styles.categoryHeader}
+        onClick={() => handleCategoryClick(category)}
+      >
+        {category}
+      </div>
+
+      {categoryProjects.map((project) => (
+        <div
+          key={project.id}
+          className="project-image-container"
+          onClick={() => openDetail(project.title)}
+          onMouseEnter={() => setHoveredProject(project.title)}
+          onMouseLeave={() => setHoveredProject(null)}
+        >
+          <div className="project-image-wrapper">
+            <img
+              src={project.image0}
+              alt={`${project.title} grayscale`}
+              className="project-image image-base"
+            />
+            <img
+              src={project.image1}
+              alt={`${project.title} color`}
+              className="project-image image-hover"
+            />
+          </div>
+        </div>
+      ))}
     </div>
-  </div>
-  
   ))}
 </div>
 

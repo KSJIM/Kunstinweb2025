@@ -1,0 +1,22 @@
+/* components/CategoryHeader.module.css */
+
+.categoryHeader {
+    font-family: 'DrukWide';
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: center;
+    color: #f9f4dc;
+    padding: 0.4em 0;
+    margin-top: 0.1%;
+    border-left: 1.5px dotted #f9f4dc;
+    border-right: 1.5px dotted #f9f4dc;
+    border-top: 1.5px dotted #f9f4dc;
+    transition: font-size 0.4s ease;
+  }
+  
+  :global(.container.detail-open) .categoryHeader {
+    font-size: 0.5em;
+  }
+  .categoryHeader:hover {
+    background-color: black; /* ✅ 黑底 */
+  }
