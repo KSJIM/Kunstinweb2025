@@ -125,7 +125,198 @@ sections: [
         
   
       },
+
+
+      '70SS': {
+        title: '70SS',
+        mainImage: '/contents/70SS/1.webp',
+        
+        info: [
+          { label: 'Project', value: '70SS' },
+          { label: 'Role', value: 'Artist / Coder' },
+          { label: 'Year', value: '2025' },
+          { label: 'Advisor', value: 'Mike Rivera' },
+              { label: 'Introduction', value: <p className="tight-value">
+       Inspired by 1970s vintage programming aesthetics, the 70SS project uses Processing to generate algorithmic compositions featuring curves and abstract patterns.
+        </p> }
+  ],
+      
+        
+
+
+  sections: [
+        {type: 'imageGroup',
+            layout: 'single',
+            images: ['/contents/70SS/2.webp']
+          },
+          {type: 'imageGroup',
+              layout: 'single',
+              images: ['/contents/70SS/3.webp']
+            },
+      
+        
+          ],
   
+    },
+
+
+    'SansuiSan': {
+      title: 'SansuiSan',
+      
+      
+      info: [
+        { label: 'Project', value: 'SansuiSan' },
+        { label: 'Role', value: 'Artist / Coder' },
+        { label: 'Year', value: '2024' },
+        { label: 'Advisor', value: 'Justin Gitlin' },
+            { label: 'Introduction', value: <p className="tight-value">
+     Inspired by the aesthetics of classical Chinese landscape painting, 'SansuiSan' explores the generative fusion of mathematical curves with symbolic elements like mountains, rivers, and falling rain using P5.js.
+      </p> }
+],
+sections: [
+      {
+        type:'fullwidth',
+        content: (
+          <div
+    style={{
+      position: 'relative',
+      paddingBottom: '100%',  // 16:9 比例
+      height: 0,
+      overflow: 'hidden',
+      marginTop: '2vh',
+      marginLeft: '2%',
+      marginRight: '2%',
+      borderRadius: '6px',
+    }} >
+            <iframe
+              src="https://editor.p5js.org/Kunstin/full/7ySBhXoNp"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="YouTube Video"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                borderRadius: '6px'
+              }}
+            ></iframe>
+          </div>
+        )
+      }
+      
+        ],
+
+  },
+
+
+  'SansuiSan': {
+      title: 'SansuiSan',
+      
+      
+      info: [
+        { label: 'Project', value: 'SansuiSan' },
+        { label: 'Role', value: 'Artist / Coder' },
+        { label: 'Year', value: '2024' },
+        { label: 'Advisor', value: 'Justin Gitlin' },
+            { label: 'Introduction', value: <p className="tight-value">
+     Inspired by the aesthetics of classical Chinese landscape painting, 'SansuiSan' explores the generative fusion of mathematical curves with symbolic elements like mountains, rivers, and falling rain using P5.js.
+      </p> }
+],
+sections: [
+      {
+        type:'fullwidth',
+        content: (
+          <div
+    style={{
+      position: 'relative',
+      paddingBottom: '100%',  // 16:9 比例
+      height: 0,
+      overflow: 'hidden',
+      marginTop: '2vh',
+      marginLeft: '2%',
+      marginRight: '2%',
+      borderRadius: '6px',
+    }} >
+            <iframe
+              src="https://editor.p5js.org/Kunstin/full/7ySBhXoNp"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="YouTube Video"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                borderRadius: '6px'
+              }}
+            ></iframe>
+          </div>
+        )
+      }
+      
+        ],
+
+  },
+
+'KeySboard': {
+      title: 'KeySboard',
+  
+      
+      info: [
+        { label: 'Project', value: 'KeySboard' },
+        { label: 'Role', value: 'Artist / Coder' },
+        { label: 'Year', value: '2025' },
+        { label: 'Advisor', value: 'Joel Swanson' },
+            { label: 'Introduction', value: <p className="tight-value">
+     Drawing inspiration from multilingual keyboard layouts, 'KeySboard' remaps the standard English QWERTY layout to create a deliberate mismatch between input and display — an experiment in user response, disorientation, and the aesthetic potential of miscommunication.
+      </p> }
+],
+sections: [
+      {
+        type:'fullwidth',
+        content: (
+          <div
+    style={{
+      position: 'relative',
+      paddingBottom: '100%',  // 16:9 比例
+      height: 0,
+      overflow: 'hidden',
+      marginTop: '2vh',
+      marginLeft: '2%',
+      marginRight: '2%',
+      borderRadius: '6px',
+    }} >
+            <iframe
+              src="https://editor.p5js.org/Kunstin/full/VbHQrxhct"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="YouTube Video"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                borderRadius: '6px'
+              }}
+            ></iframe>
+          </div>
+        )
+      }
+      
+        ],
+
+  },
+
+
+
+
 
    
   };

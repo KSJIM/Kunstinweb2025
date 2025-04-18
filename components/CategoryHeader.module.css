@@ -20,3 +20,29 @@
   .categoryHeader:hover {
     background-color: black; /* ✅ 黑底 */
   }
+
+  .header {
+    font-family: 'Diatype';
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #111;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 0.5em;
+    background-color: #eee;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .header:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .active {
+    background-color: black;
+    color: white;
+  }
+  
+ 

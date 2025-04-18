@@ -16,6 +16,8 @@ import styles from '../components/CategoryHeader.module.css';
 
 //每个项目标题和封面图
 const projects = [
+  
+  
   {
     id: 'Caltyp',
     title: 'Caltyp',
@@ -27,6 +29,12 @@ const projects = [
     title: 'L-Shufa',
     image0: '/mainpics/Lsystem0.webp',
     image1: '/mainpics/Lsystem1.webp',
+  },
+  {
+    id: '70SS',
+    title: '70SS',
+    image0: '/mainpics/70SS0.webp',
+    image1: '/mainpics/70SS1.webp',
   },
   {
     id: 'B8',
@@ -46,16 +54,39 @@ const projects = [
     image0: '/mainpics/Terra0.webp',
     image1: '/mainpics/Terra1.webp',
   },
+  {
+    id: 'SansuiSan',
+    title: 'SansuiSan',
+    image0: '/mainpics/SansuiSan0.webp',
+    image1: '/mainpics/SansuiSan1.webp',
+  },
+
+  {
+    id: 'KeySboard',
+    title: 'KeySboard',
+    image0: '/mainpics/KeySboard0.webp',
+    image1: '/mainpics/KeySboard1.webp',
+  },
+
+  
+
+  
 ];
+
+
 
 
 //每个项目对应的颜色
 const projectColors = {
   'Caltyp':'#36292f',
   'L-Shufa': '#cdd1d3',
+  '70SS':'#8076a3',
   'B8': '#9e9d08',
   'Sternal': '#346c9c',
   'Terra': '#daa45a',
+  'SansuiSan': '#daa45a',
+  'KeySborad': '#daa45a',
+
 };
 
 
@@ -90,7 +121,15 @@ export default function Home() {
 
 //项目分类
 
+
 const mainRef = useRef();  // 用于控制整个 scroll 区
+
+const projectRefs = useRef({});
+
+
+/*将 projects 重复三次以实现无限滚动效果
+const repeatedProjects = [...projects, ...projects, ...projects];*/
+
 const categoryRefs = {
   'Computational Art and Design': useRef(null),
   'Industrial and Product Design': useRef(null),
@@ -99,14 +138,63 @@ const categoryRefs = {
 };
 
 const handleCategoryClick = (category) => {
-  if (categoryRefs[category]?.current && mainRef?.current) {
-    const offsetTop = categoryRefs[category].current.offsetTop;
-    mainRef.current.scrollTo({
-      top: offsetTop,
-      behavior: 'smooth'
+  const el = categoryRefs[category]?.current;
+  const container = mainRef.current;
+  if (el && container) {
+    const offset = el.offsetTop;
+    container.scrollTo({
+      top: offset - window.innerHeight * 0.002, // 保留 0.2% 空隙
+      behavior: 'smooth',
     });
   }
 };
+
+
+
+
+/*useEffect(() => {
+  const scrollContainer = scrollRef.current;
+  if (!scrollContainer) return;
+
+  // 初始滚动到中间那组项目
+  const itemHeight = scrollContainer.scrollHeight / 3;
+  scrollContainer.scrollTop = itemHeight;
+
+  const handleScroll = () => {
+    const scrollTop = scrollContainer.scrollTop;
+    const totalHeight = scrollContainer.scrollHeight;
+    const oneThird = totalHeight / 3;
+
+    // 👇 如果滚到最顶部
+    if (scrollTop < oneThird / 2) {
+      scrollContainer.scrollTop = scrollTop + oneThird;
+    }
+
+    // 👇 如果滚到最底部
+    if (scrollTop > oneThird * 1.5) {
+      scrollContainer.scrollTop = scrollTop - oneThird;
+    }
+  };
+
+  scrollContainer.addEventListener('scroll', handleScroll);
+  return () => scrollContainer.removeEventListener('scroll', handleScroll);
+}, []);*/
+
+
+//detail时main栏逻辑
+useEffect(() => {
+  if (showDetail && activeProject && projectRefs.current[activeProject]) {
+    const el = projectRefs.current[activeProject];
+    const offset = el.getBoundingClientRect().top + window.scrollY;
+    const containerOffset = mainRef.current?.offsetTop || 0;
+
+    window.scrollTo({
+      top: offset - containerOffset - window.innerHeight * 0.002,
+      behavior: 'smooth',
+    });
+  }
+}, [showDetail, activeProject]);
+
 
 
  //项目detail
@@ -218,17 +306,20 @@ activeColor;
   const openDetail = (project) => {
     setActiveProject(project);
     setShowDetail(true);
- // 滚动到点击的项目位置
- setTimeout(() => {
-  const element = document.querySelector(`[data-project="${project}"]`);
-  if (element && mainRef.current) {
-    mainRef.current.scrollTo({
-      top: element.offsetTop,
-      behavior: 'smooth',
-    });
-  }
-}, 100);
-};
+  
+    setTimeout(() => {
+      const el = projectRefs.current[project];
+      const container = mainRef.current;
+      if (el && container) {
+        const offset = el.offsetTop;
+        container.scrollTo({
+          top: offset - window.innerHeight * 0.002,
+          behavior: 'smooth',
+        });
+      }
+    }, 50); // 细微 delay 等 detail 渲染逻辑处理
+  };
+  
 
   const closeDetail = () => {
     setShowDetail(false);
@@ -366,8 +457,9 @@ activeColor;
   }}
 >
   {Object.entries({
-    'Computational Art and Design': projects.slice(0, 2),
-    'Industrial and Product Design': projects.slice(2),
+    'Computational Art and Design': projects.slice(0, 3),
+    'Industrial and Product Design': projects.slice(3,6),
+    'Creative Coding': projects.slice(6),
     // 后续你可继续添加分类
   }).map(([category, categoryProjects]) => (
     <div key={category} ref={categoryRefs[category]}>
@@ -381,6 +473,7 @@ activeColor;
       {categoryProjects.map((project) => (
         <div
           key={project.id}
+          ref={(el) => (projectRefs.current[project.title] = el)} 
           className="project-image-container"
           onClick={() => openDetail(project.title)}
           onMouseEnter={() => setHoveredProject(project.title)}

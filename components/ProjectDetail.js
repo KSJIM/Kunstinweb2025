@@ -62,8 +62,16 @@ const ProjectDetail = ({ data }) => {
         ))}
       </div>
     );
+    
   }
-
+// ✅ 👇 全宽展示的内容（如 YouTube iframe）
+if (section.type === 'fullwidth') {
+  return (
+    <div key={i} style={{ width: '100%' }}>
+      {section.content}
+    </div>
+  );
+}
   // 2. 标准 Section（带文字）
   return (
     <div key={i}>
