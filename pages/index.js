@@ -11,6 +11,34 @@ import ProjectDetail from '../components/ProjectDetail';
 
 import styles from '../components/CategoryHeader.module.css';
 
+//平滑scroll
+
+function smoothScrollTo(targetY, duration = 600) {
+  const startY = window.scrollY;
+  const diff = targetY - startY;
+  let startTime;
+
+  function easeInOut(t) {
+    return t < 0.5
+      ? 2 * t * t
+      : -1 + (4 - 2 * t) * t;
+  }
+
+  function scrollStep(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const timeElapsed = timestamp - startTime;
+    const progress = Math.min(timeElapsed / duration, 1);
+    const easedProgress = easeInOut(progress);
+
+    window.scrollTo(0, startY + diff * easedProgress);
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(scrollStep);
+    }
+  }
+
+  requestAnimationFrame(scrollStep);
+}
 
 
 
@@ -84,8 +112,8 @@ const projectColors = {
   'B8': '#9e9d08',
   'Sternal': '#346c9c',
   'Terra': '#daa45a',
-  'SansuiSan': '#daa45a',
-  'KeySborad': '#daa45a',
+  'SansuiSan': '#0eb0c9',
+  'KeySborad': '#131824',
 
 };
 
@@ -139,15 +167,14 @@ const categoryRefs = {
 
 const handleCategoryClick = (category) => {
   const el = categoryRefs[category]?.current;
-  const container = mainRef.current;
-  if (el && container) {
-    const offset = el.offsetTop;
-    container.scrollTo({
-      top: offset - window.innerHeight * 0.002, // 保留 0.2% 空隙
-      behavior: 'smooth',
-    });
+  if (el) {
+    const offset = el.getBoundingClientRect().top + window.scrollY;
+    const containerOffset = mainRef.current?.offsetTop || 0;
+
+    smoothScrollTo(offset - containerOffset - window.innerHeight * 0.002); // 用你新的函数
   }
 };
+
 
 
 
@@ -180,20 +207,29 @@ const handleCategoryClick = (category) => {
   return () => scrollContainer.removeEventListener('scroll', handleScroll);
 }, []);*/
 
+const [pendingScrollProject, setPendingScrollProject] = useState(null);
 
-//detail时main栏逻辑
+const openDetail = (project) => {
+  setActiveProject(project);
+  setShowDetail(true);
+  setPendingScrollProject(project); // 等待完成 render 再 scroll
+};
 useEffect(() => {
-  if (showDetail && activeProject && projectRefs.current[activeProject]) {
-    const el = projectRefs.current[activeProject];
-    const offset = el.getBoundingClientRect().top + window.scrollY;
-    const containerOffset = mainRef.current?.offsetTop || 0;
+  if (showDetail && pendingScrollProject && projectRefs.current[pendingScrollProject]) {
+    const el = projectRefs.current[pendingScrollProject];
+    const container = mainRef.current;
 
-    window.scrollTo({
-      top: offset - containerOffset - window.innerHeight * 0.002,
-      behavior: 'smooth',
-    });
+    if (el && container) {
+      container.scrollTo({
+        top: el.offsetTop - container.clientHeight * 0.008,
+        behavior: 'smooth',
+      });
+    }
+
+    setPendingScrollProject(null); // 清除等待状态
   }
-}, [showDetail, activeProject]);
+}, [showDetail, pendingScrollProject]);
+
 
 
 
@@ -303,23 +339,7 @@ activeColor;
   };
   
 
-  const openDetail = (project) => {
-    setActiveProject(project);
-    setShowDetail(true);
-  
-    setTimeout(() => {
-      const el = projectRefs.current[project];
-      const container = mainRef.current;
-      if (el && container) {
-        const offset = el.offsetTop;
-        container.scrollTo({
-          top: offset - window.innerHeight * 0.002,
-          behavior: 'smooth',
-        });
-      }
-    }, 50); // 细微 delay 等 detail 渲染逻辑处理
-  };
-  
+
 
   const closeDetail = () => {
     setShowDetail(false);
@@ -381,8 +401,13 @@ activeColor;
         {activeMenu === 'ABOUT' && (
   <div className="bottom-content">
 
-<img src="/profile/profile7.webp" alt="Profile" className="sidebar-profile" />
-    
+<div className="profile-image-container">
+  <div className="profile-image-wrapper">
+    <img src="/profile/profile7.webp" alt="Profile BW" className="profile-image image-base" />
+    <img src="/profile/profile8.webp" alt="Profile Color" className="profile-image image-hover" />
+  </div>
+</div>
+
 <div className="sidebar-spacer" />
 
     <p>
