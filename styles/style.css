@@ -471,7 +471,9 @@ height: 100%;
 }
 
 
-
+.container.detail-open .project-image-container.active {
+  outline: 1px dotted #f9f4dc;
+}
 
 
 

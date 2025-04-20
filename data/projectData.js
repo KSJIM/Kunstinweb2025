@@ -65,7 +65,7 @@ sections: [
 
     
   
-    // 其他项目...
+   
 
    'Caltyp': {
         title: 'Caltyp',
@@ -85,9 +85,15 @@ sections: [
   sections: [
       {type: 'imageGroup',
           layout: 'single',
-          images: ['/contents/Caltyp/temp1.webp']
+          images: ['/contents/Caltyp/temp2.webp']
         },
   
+               
+  
+    {type: 'imageGroup',
+        layout: 'single',
+        images: ['/contents/Caltyp/temp3.webp']
+      },
   
         
       /*{
