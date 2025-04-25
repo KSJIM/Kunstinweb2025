@@ -795,3 +795,43 @@ height: 100%;
 
 
 
+
+
+/* mobile针对屏幕宽度小于768px的设备 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;  /* 改为上下布局 */
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px dotted #f4f4f4;
+  }
+
+  .main {
+    width: 100%;
+    padding: 2%;
+    font-size: 4vw;  /* 文字适配 */
+  }
+
+  .detail {
+    width: 100%;
+  }
+
+  .menu-link {
+    font-size: 6vw;  /* 菜单更大方便点击 */
+  }
+
+  .project-image-container {
+    aspect-ratio: 1 / 1;  /* 改为正方形或其他适合手机比例 */
+    margin-bottom: 4vw;
+  }
+
+  .sidebar-profile {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
