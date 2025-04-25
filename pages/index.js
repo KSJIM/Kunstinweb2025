@@ -101,6 +101,23 @@ const projects = [
   
 ];
 
+//模版
+const isMobile = window.innerWidth <= 768;
+
+const openDetail = (project) => {
+  setActiveProject(project);
+  setShowDetail(true);
+
+  if (window.innerWidth <= 768) {
+    // Mobile: 滑动到 detail 区域
+    setTimeout(() => {
+      document.querySelector('.detail').scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  } else {
+    // PC逻辑保持不变
+  }
+};
+
 
 
 
