@@ -797,41 +797,65 @@ height: 100%;
 
 
 
-/* mobile针对屏幕宽度小于768px的设备 */
+/* ===== Mobile 端适配 ===== */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;  /* 改为上下布局 */
-    height: auto;
-  }
 
   .sidebar {
     width: 100%;
     height: auto;
+    flex-direction: column;
+    align-items: center;
     border-right: none;
-    border-bottom: 1px dotted #f4f4f4;
+  }
+
+  .site-title {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .sidebar-menu {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .sidebar-profile {
+    max-width: 50vw;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .sidebar-bottom p {
+    font-size: 1em;
+    text-align: center;
+    padding: 0 10px;
   }
 
   .main {
     width: 100%;
     padding: 2%;
-    font-size: 4vw;  /* 文字适配 */
-  }
-
-  .detail {
-    width: 100%;
-  }
-
-  .menu-link {
-    font-size: 6vw;  /* 菜单更大方便点击 */
+    font-size: 1em;
   }
 
   .project-image-container {
-    aspect-ratio: 1 / 1;  /* 改为正方形或其他适合手机比例 */
-    margin-bottom: 4vw;
+    aspect-ratio: auto;
+    width: 90%;
+    margin: 5% auto;
   }
 
-  .sidebar-profile {
-    max-width: 60%;
-    margin: 0 auto;
+  .detail {
+    width: 100% !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: white;
+    z-index: 9999;
+    overflow-y: scroll;
   }
+
+  .container.detail-open .main {
+    width: 100%;
+  }
+
 }
