@@ -828,7 +828,7 @@ height: 100%;
   }
 
   .main {
-    width: 100%;
+    width: auto;
     padding: 2%;
     font-size: 4vw;
     overflow-y: auto;
@@ -844,13 +844,33 @@ height: 100%;
     padding: 4%;
   }
 
-  .container.detail-open .detail {
-    width: 100%;
-    padding: 4%;
+  .container.detail-open .main {
+    display: none; /* 📵 隐藏主栏 */
   }
 
+  .container.detail-open .detail {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100vh;
+    z-index: 999;
+    padding: 4vw;
+    overflow-y: auto;
+    background: white;
+  }
+
+  .close-btn {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    padding: 4vw;
+    font-size: 5vw;
+  }
+}
   .project-image-container {
     aspect-ratio: 1 / 1;
     margin-bottom: 4vw;
   }
-}
+
