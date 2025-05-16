@@ -102,7 +102,7 @@ const projects = [
 ];
 
 //模版
-const isMobile = window.innerWidth <= 768;
+
 
 const openDetail = (project) => {
   setActiveProject(project);
@@ -148,7 +148,15 @@ export default function Home() {
 
 
 
-  
+  //移动端
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsMobile(window.innerWidth <= 768);
+    }
+  }, []);
+
 
   //视频播放
   const sidebarVideos = [ '/sidebarmedia/A2.mp4',];
