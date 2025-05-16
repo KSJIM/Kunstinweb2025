@@ -832,7 +832,7 @@ height: 100%;
     padding: 2%;
     font-size: 4vw;
     overflow-y: auto;
-    max-height: 60vh;   /* 保证 main 可滑动 */
+    
   }
 
   /* Detail 改为下方显示 */
