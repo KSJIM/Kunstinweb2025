@@ -67,36 +67,27 @@ sections: [
   
    
 
-   'Caltyp': {
-        title: 'Caltyp',
-        mainImage: '/contents/Caltyp/1.webp',
+   'Corty': {
+        title: 'Corty',
+        mainImage: '/contents/Corty/2.webp',
         
         info: [
-          { label: 'Project', value: 'Caltyp' },
-          { label: 'Role', value: 'Artist / Coder' },
-          { label: 'Year', value: 'Work in progress' },
-          { label: 'Advisor', value: 'Mike Rivera' },
+          { label: 'Project', value: 'CORTY' },
+          { label: 'Role', value: 'Fabricator / Coder' },
+          { label: 'Year', value: '2025' },
+          { label: 'Advisor', value: 'Joel Swanson, Mike Rivera' },
               { label: 'Introduction', value: <p className="tight-value">
-       Caltyp explores the generative reconstruction of Latin letterforms through dynamic simulation in Kangaroo2 (Grasshopper). The outcomes are transformed into 3D compositions, which serve as 'stamp' models for collaborative artistic creation with users.
+       CORTY explores the potential of computational design to reinterpret Latin letterforms through physics-based simulation. Inspired by the abstract aesthetics of coral, the project integrates digital fabrication and creative coding to create cross-media artistic expressions.
         </p> }
   ],
       
+
+
         
   sections: [
-      {type: 'imageGroup',
-          layout: 'single',
-          images: ['/contents/Caltyp/temp2.webp']
-        },
-  
-               
-  
-    {type: 'imageGroup',
-        layout: 'single',
-        images: ['/contents/Caltyp/temp3.webp']
-      },
-  
+     
         
-      /*{
+      {
         label: 'INSPIRATION',
         content: 'This project is inspired by the poetic imagery of traditional Chinese landscape painting and the abstract composition of flowing curves.',
       },
@@ -124,13 +115,53 @@ sections: [
   
   
       {
-          label: 'CREATION',
+          label: 'FABRICATION',
           content: 'In the final stage, I simulated the effect of a “bamboo forest” by generating patterns through dual-directional drawing, incorporating randomness in both stroke thickness and intensity.',
-        }*/
+        },
+
+
+
+        {
+          type: 'sub',
+          
+          content:'Pen-Plotting：Use an AxiDraw pen plotter to control a syringe pen to draw curve-based art generated in Processing.'
+        },
+        
+        {
+          type: 'imageGroup',
+          layout: 'single',
+          images: [
+            '/contents/Corty/pen1.gif',
+          ]
+        },
+      
+
+        {
+          type: 'imageGroup',
+          layout: 'carousel',
+          images: [
+            '/contents/Corty/scan-corty/A.webp','/contents/Corty/scan-corty/B.webp','/contents/Corty/scan-corty/C.webp',
+            '/contents/Corty/scan-corty/D.webp','/contents/Corty/scan-corty/E.webp','/contents/Corty/scan-corty/F.webp',
+            '/contents/Corty/scan-corty/G.webp','/contents/Corty/scan-corty/H.webp','/contents/Corty/scan-corty/I.webp',
+            '/contents/Corty/scan-corty/J.webp','/contents/Corty/scan-corty/K.webp','/contents/Corty/scan-corty/L.webp',
+            '/contents/Corty/scan-corty/M.webp','/contents/Corty/scan-corty/N.webp','/contents/Corty/scan-corty/O.webp',
+            '/contents/Corty/scan-corty/P.webp','/contents/Corty/scan-corty/Q.webp','/contents/Corty/scan-corty/R.webp',
+            '/contents/Corty/scan-corty/S.webp','/contents/Corty/scan-corty/T.webp','/contents/Corty/scan-corty/U.webp',
+            '/contents/Corty/scan-corty/V.webp','/contents/Corty/scan-corty/W.webp','/contents/Corty/scan-corty/X.webp',
+            '/contents/Corty/scan-corty/Y.webp','/contents/Corty/scan-corty/Z.webp',
+          ]
+        },
+  
     ],
         
   
       },
+
+
+
+
+
+
 
 
       '70SS': {

@@ -72,6 +72,18 @@ if (section.type === 'fullwidth') {
     </div>
   );
 }
+
+
+// 👇 新增处理 type: 'sub'
+if (section.type === 'sub') {
+  return (
+    <div key={i} className="project-subsection">
+      <div className="section-label">{section.label}</div>
+      <div className="section-content">{section.content}</div>
+    </div>
+  );
+}
+
   // 2. 标准 Section（带文字）
   return (
     <div key={i}>

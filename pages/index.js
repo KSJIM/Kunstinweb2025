@@ -47,8 +47,8 @@ const projects = [
   
   
   {
-    id: 'Caltyp',
-    title: 'Caltyp',
+    id: 'Corty',
+    title: 'Corty',
     image0: '/mainpics/Calityp0.webp',
     image1: '/mainpics/Calityp1.webp',
   },
@@ -123,7 +123,7 @@ const openDetail = (project) => {
 
 //每个项目对应的颜色
 const projectColors = {
-  'Caltyp':'#36292f',
+  'Corty':'#36292f',
   'L-Shufa': '#cdd1d3',
   '70SS':'#8076a3',
   'B8': '#9e9d08',
