@@ -87,7 +87,7 @@ sections: [
   sections: [
      
         
-      {
+      /*{
         label: 'INSPIRATION',
         content: 'This project is inspired by the poetic imagery of traditional Chinese landscape painting and the abstract composition of flowing curves.',
       },
@@ -111,7 +111,7 @@ sections: [
           type: 'imageGroup',
           layout: 'grid-2x2',
           images: ['/contents/L-shufa/l1.webp', '/contents/L-shufa/l2.webp','/contents/L-shufa/l3.webp','/contents/L-shufa/l4.webp']
-        },
+        },*/
   
   
       {
