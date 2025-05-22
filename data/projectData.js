@@ -178,11 +178,24 @@ sections: [
         
         {
           type: 'imageGroup',
-          layout: 'single',
+          layout: 'carousel',
           images: [
-            '/contents/Corty/pen1.gif',
+            '/contents/Corty/fabrication/3d1.gif','/contents/Corty/fabrication/3d2.gif','/contents/Corty/fabrication/3d.webp','/contents/Corty/fabrication/3d2.webp'
           ]
         },
+        {
+          type: 'sub',
+          content:'Laser-cutting: The stamp rubber was laser-cut and assembled with the 3D-printed stamp handles.'
+        },
+        
+        {
+          type: 'imageGroup',
+          layout: 'carousel',
+          images: [
+            '/contents/Corty/fabrication/laser.webp','/contents/Corty/fabrication/laser2.webp','/contents/Corty/fabrication/assemble.webp'
+          ]
+        },
+
 
         {
           type: 'sub',
@@ -203,6 +216,11 @@ sections: [
         },
 
 
+
+        {
+          type: 'sub',
+          content:'Final co-art pieces'
+        },
         {
           type: 'imageGroup',
           layout: 'carousel',
