@@ -167,14 +167,25 @@ sections: [
   
       {
           label: 'FABRICATION',
-          content: 'In the final stage, I simulated the effect of a “bamboo forest” by generating patterns through dual-directional drawing, incorporating randomness in both stroke thickness and intensity.',
+          content: 'Using 3D printing, laser cutting, and pen-plotting, I produced a full set of stamps based on the 26 CORTY letters, as well as custom-designed paper stamp pads.',
         },
-
 
 
         {
           type: 'sub',
+          content:'3D Printing: Dual-color filament was used to 3D print the stamp handles, allowing the appearance to shift in hue and texture depending on light and viewing angle. The color scheme draws inspiration from the vibrant tones of coral.'
+        },
         
+        {
+          type: 'imageGroup',
+          layout: 'single',
+          images: [
+            '/contents/Corty/pen1.gif',
+          ]
+        },
+
+        {
+          type: 'sub',
           content:'Pen-Plotting: Use an AxiDraw pen plotter to control a syringe pen to draw curve-based art generated in Processing.'
         },
         
@@ -186,6 +197,11 @@ sections: [
           ]
         },
       
+        {
+          label: 'EXHIBITION',
+          content: 'Using 3D printing, laser cutting, and pen-plotting, I produced a full set of stamps based on the 26 CORTY letters, as well as custom-designed paper stamp pads.',
+        },
+
 
         {
           type: 'imageGroup',
