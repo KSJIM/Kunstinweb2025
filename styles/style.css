@@ -684,7 +684,7 @@ height: 100%;
 .section-imageGroup {
   margin-top: 2vh;
   margin-bottom: 2vh;
-  outline: 2px dotted #f9f4dc;
+  outline: 1px dotted #f9f4dc;
 }
 
 /* === 单图布局 === */

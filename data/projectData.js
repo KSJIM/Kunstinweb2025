@@ -117,19 +117,52 @@ sections: [
           images: ['/contents/Corty/ideation/gh1.webp','/contents/Corty/ideation/temp2.webp']
         },
 
+        {
+          type: 'imageGroup',
+          layout: 'carousel',
+          images: ['/contents/Corty/ideation/cortytype.webp/',
+            '/contents/Corty/ideation/data/A.webp','/contents/Corty/ideation/data/B.webp','/contents/Corty/ideation/data/C.webp',
+            '/contents/Corty/ideation/data/D.webp','/contents/Corty/ideation/data/E.webp','/contents/Corty/ideation/data/F.webp',
+            '/contents/Corty/ideation/data/G.webp','/contents/Corty/ideation/data/H.webp','/contents/Corty/ideation/data//I.webp',
+            '/contents/Corty/ideation/data/J.webp','/contents/Corty/ideation/data/K.webp','/contents/Corty/ideation/data/L.webp',
+            '/contents/Corty/ideation/data/M.webp','/contents/Corty/ideation/data/N.webp','/contents/Corty/ideation/data/O.webp',
+            '/contents/Corty/ideation/data//P.webp','/contents/Corty/ideation/data/Q.webp','/contents/Corty/ideation/data//R.webp',
+            '/contents/Corty/ideation/data/S.webp','/contents/Corty/ideation/data/T.webp','/contents/Corty/ideation/data/U.webp',
+            '/contents/Corty/ideation/data/V.webp','/contents/Corty/ideation/data/W.webp','/contents/Corty/ideation/data/X.webp',
+            '/contents/Corty/ideation/data/Y.webp','/contents/Corty/ideation/data/Z.webp',
+          ]
+        },
 
         {
           type: 'sub',
-          
           content:'The generated letterform curves were solidified using the Loft function in Grasshopper. With components like Graph Mapper, the form was further refined to follow ergonomic streamlines suitable for stamping grip. Finally, the shape was deconstructed and reassembled through Contour and Extrusion operations.'
         },
     
         {
             type: 'imageGroup',
             layout: 'carousel',
-            images: ['/contents/Corty/ideation/gh2.webp','/contents/Corty/ideation/gh3.webp']
+            images: ['/contents/Corty/ideation/showcase.webp','/contents/Corty/ideation/gh2.webp','/contents/Corty/ideation/gh3.webp',]
           },
   
+          {
+            type: 'sub',
+            content:'Using Processing, I then developed generative extensions based on the structural forms of the CORTY typeface.'
+          },
+      
+          {
+              type: 'imageGroup',
+              layout: 'carousel',
+              images: ['/contents/Corty/ideation/processing/outputA.webp','/contents/Corty/ideation/processing/outputB.webp','/contents/Corty/ideation/processing/outputC.webp',
+                '/contents/Corty/ideation/processing/outputD.webp','/contents/Corty/ideation/processing/outputE.webp','/contents/Corty/ideation/processing/outputF.webp',
+                '/contents/Corty/ideation/processing/outputG.webp','/contents/Corty/ideation/processing/outputH.webp','/contents/Corty/ideation/processing/outputI.webp',
+                '/contents/Corty/ideation/processing/outputJ.webp','/contents/Corty/ideation/processing/outputK.webp','/contents/Corty/ideation/processing/outputL.webp',
+                '/contents/Corty/ideation/processing/outputM.webp','/contents/Corty/ideation/processing/outputN.webp','/contents/Corty/ideation/processing/outputO.webp',
+                '/contents/Corty/ideation/processing/outputP.webp','/contents/Corty/ideation/processing/outputQ.webp','/contents/Corty/ideation/processing/outputR.webp','/contents/Corty/ideation/processing/outputS.webp',
+                '/contents/Corty/ideation/processing/outputT.webp','/contents/Corty/ideation/processing/outputU.webp','/contents/Corty/ideation/processing/outputV.webp',
+                '/contents/Corty/ideation/processing/outputW.webp','/contents/Corty/ideation/processing/outputX.webp','/contents/Corty/ideation/processing/outputY.webp',
+                '/contents/Corty/ideation/processing/outputZ.webp',
+              ]
+            },
 
   
       {
@@ -141,8 +174,8 @@ sections: [
 
         {
           type: 'sub',
-          
-          content:'Pen-Plotting：Use an AxiDraw pen plotter to control a syringe pen to draw curve-based art generated in Processing.'
+        
+          content:'Pen-Plotting: Use an AxiDraw pen plotter to control a syringe pen to draw curve-based art generated in Processing.'
         },
         
         {
