@@ -18,6 +18,11 @@ const projectsData = {
     
       
 sections: [
+  {
+    label: 'INSPIRATION',
+    content: 'This project is inspired by the poetic imagery of traditional Chinese landscape painting and the abstract composition of flowing curves.',
+  },
+  
     {type: 'imageGroup',
         layout: 'carousel',
         images: ['/contents/L-shufa/i1.webp', '/contents/L-shufa/i2.webp','/contents/L-shufa/i3.webp','/contents/L-shufa/i4.webp']
@@ -25,10 +30,11 @@ sections: [
 
 
       
-    {
-      label: 'INSPIRATION',
-      content: 'This project is inspired by the poetic imagery of traditional Chinese landscape painting and the abstract composition of flowing curves.',
-    },
+      {
+        label: 'IDEATION',
+        content: 'Through L-system experimentation, I explored a range of visual outputs, using irregular loops and flowing curves as the basic units for generative pattern creation.',
+      },
+  
 
     {type: 'imageGroup',
         layout: 'grid-2x2',
@@ -39,23 +45,19 @@ sections: [
         images: ['/contents/L-shufa/l9.webp', '/contents/L-shufa/l10.webp','/contents/L-shufa/l11.webp','/contents/L-shufa/l12.webp','/contents/L-shufa/l13.webp','/contents/L-shufa/l14.webp']
       },
 
-
-    {
-      label: 'IDEATION',
-      content: 'Through L-system experimentation, I explored a range of visual outputs, using irregular loops and flowing curves as the basic units for generative pattern creation.',
-    },
-
+      {
+        label: 'CREATION',
+        content: 'In the final stage, I simulated the effect of a “bamboo forest” by generating patterns through dual-directional drawing, incorporating randomness in both stroke thickness and intensity.',
+      },
+   
     {
         type: 'imageGroup',
         layout: 'grid-2x2',
         images: ['/contents/L-shufa/l1.webp', '/contents/L-shufa/l2.webp','/contents/L-shufa/l3.webp','/contents/L-shufa/l4.webp']
-      },
-
-
-    {
-        label: 'CREATION',
-        content: 'In the final stage, I simulated the effect of a “bamboo forest” by generating patterns through dual-directional drawing, incorporating randomness in both stroke thickness and intensity.',
       }
+
+
+   
   ],
       
 
@@ -87,32 +89,48 @@ sections: [
   sections: [
      
         
-      /*{
+      {
         label: 'INSPIRATION',
-        content: 'This project is inspired by the poetic imagery of traditional Chinese landscape painting and the abstract composition of flowing curves.',
+        content: 'This project is inspired by the pressure and fluid dynamics of the sea, as well as the organic marine aesthetics shaped by these dynamic forces.',
       },
   
       {type: 'imageGroup',
-          layout: 'grid-2x2',
-          images: ['/contents/L-shufa/l5.webp', '/contents/L-shufa/l6.webp','/contents/L-shufa/l7.webp','/contents/L-shufa/l8.webp']
-        },
-        {type: 'imageGroup',
-          layout: 'grid-3x2',
-          images: ['/contents/L-shufa/l9.webp', '/contents/L-shufa/l10.webp','/contents/L-shufa/l11.webp','/contents/L-shufa/l12.webp','/contents/L-shufa/l13.webp','/contents/L-shufa/l14.webp']
+          layout: 'carousel',
+          images: ['/contents/Corty/inspiration/1.webp', '/contents/Corty/inspiration/2.webp','/contents/Corty/inspiration/3.webp','/contents/Corty/inspiration/4.webp','/contents/Corty/inspiration/5.webp',]
         },
   
   
       {
         label: 'IDEATION',
-        content: 'Through L-system experimentation, I explored a range of visual outputs, using irregular loops and flowing curves as the basic units for generative pattern creation.',
+        content: 'Through a combination of parametric and generative techniques, the curves of all 26 Latin letters were reinterpreted—transformed through processes of structural reconstruction, spatial materialization, and visual abstraction.',
+      },
+
+      {
+        type: 'sub',
+        
+        content:'Through Kangaroo2 in Grasshopper, I simulated the fluid tension of seawater to reconstruct the structural logic of basic Latin letterform curves.'
       },
   
       {
           type: 'imageGroup',
-          layout: 'grid-2x2',
-          images: ['/contents/L-shufa/l1.webp', '/contents/L-shufa/l2.webp','/contents/L-shufa/l3.webp','/contents/L-shufa/l4.webp']
-        },*/
+          layout: 'carousel',
+          images: ['/contents/Corty/ideation/gh1.webp','/contents/Corty/ideation/temp2.webp']
+        },
+
+
+        {
+          type: 'sub',
+          
+          content:'The generated letterform curves were solidified using the Loft function in Grasshopper. With components like Graph Mapper, the form was further refined to follow ergonomic streamlines suitable for stamping grip. Finally, the shape was deconstructed and reassembled through Contour and Extrusion operations.'
+        },
+    
+        {
+            type: 'imageGroup',
+            layout: 'carousel',
+            images: ['/contents/Corty/ideation/gh2.webp','/contents/Corty/ideation/gh3.webp']
+          },
   
+
   
       {
           label: 'FABRICATION',

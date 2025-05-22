@@ -558,6 +558,9 @@ height: 100%;
   column-gap: 3vw;
   align-items: start;
   margin-top: 2vh;
+  margin-bottom: 16%;
+  padding-bottom: 8%;
+  border-bottom:  #f9f4dc dotted 2px;
 }
 
 /* 直接用于 label 和 value */
@@ -618,9 +621,9 @@ height: 100%;
   column-gap: 3vw;
   row-gap: 1.2vh;
   
-  margin-bottom: 10%;
+  margin-bottom: 6%;
   align-items: start;
- border-top:  #f9f4dc dotted 2px;
+ /*border-top:  #f9f4dc dotted 2px;*/
  padding-top: 5%;
 }
 
