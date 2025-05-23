@@ -205,22 +205,51 @@ sections: [
         
         {
           type: 'imageGroup',
-          layout: 'single',
+          layout: 'carousel',
           images: [
-            '/contents/Corty/pen1.gif',
+            '/contents/Corty/pen1.gif','/contents/Corty/fabrication/pen2.gif','/contents/Corty/pen2.webp','/contents/Corty/pen3.webp','/contents/Corty/pen4.webp'
           ]
         },
       
         {
           label: 'EXHIBITION',
-          content: 'Using 3D printing, laser cutting, and pen-plotting, I produced a full set of stamps based on the 26 CORTY letters, as well as custom-designed paper stamp pads.',
+          content: 'At the 2025 ATLAS Institute EXPO, CORTY reached its final form through a participatory installation involving all exhibition visitors. The full set of 26 letter stamps was laid out on custom "curve bases", accompanied by a seaweed-green ink pad. Audiences were invited to co-create—freely stamping and composing on the bases or on white paper, turning the space into an evolving field of collective typography.',
         },
 
 
 
         {
           type: 'sub',
-          content:'Final co-art pieces'
+          content:'Co-Creation Process'
+        },
+
+
+        {
+          type: 'imageGroup',
+          layout: 'carousel',
+          images: [
+            '/contents/Corty/exhibition/ex1.webp','/contents/Corty/exhibition/ex2.webp','/contents/Corty/exhibition/ex3.webp',
+            '/contents/Corty/exhibition/ex4.webp','/contents/Corty/exhibition/ex.webp','/contents/Corty/exhibition/ex0.webp',
+            '/contents/Corty/exhibition/e1.webp', '/contents/Corty/exhibition/e2.webp','/contents/Corty/exhibition/e3.webp',
+          ]
+        },
+
+        {
+          type: 'imageGroup',
+          layout: 'carousel',
+          images: [
+            '/contents/Corty/exhibition/ex5.webp','/contents/Corty/exhibition/ex6.webp','/contents/Corty/exhibition/ex7.webp',
+            '/contents/Corty/exhibition/ex8.webp',
+            '/contents/Corty/exhibition/e4.webp', '/contents/Corty/exhibition/e5.webp','/contents/Corty/exhibition/e6.webp',
+            
+          ]
+        },
+
+
+
+        {
+          type: 'sub',
+          content:'Final Co-Creation Pieces'
         },
         {
           type: 'imageGroup',
@@ -235,6 +264,18 @@ sections: [
             '/contents/Corty/scan-corty/S.webp','/contents/Corty/scan-corty/T.webp','/contents/Corty/scan-corty/U.webp',
             '/contents/Corty/scan-corty/V.webp','/contents/Corty/scan-corty/W.webp','/contents/Corty/scan-corty/X.webp',
             '/contents/Corty/scan-corty/Y.webp','/contents/Corty/scan-corty/Z.webp',
+          ]
+        },
+
+        {
+          type: 'imageGroup',
+          layout: 'carousel',
+          images: [
+            '/contents/Corty/scan-corty/26main.webp','/contents/Corty/scan-corty/0.webp','/contents/Corty/scan-corty/1.webp',
+            '/contents/Corty/scan-corty/2.webp','/contents/Corty/scan-corty/3.webp','/contents/Corty/scan-corty/4.webp',
+            '/contents/Corty/scan-corty/5.webp','/contents/Corty/scan-corty/6.webp','/contents/Corty/scan-corty/7.webp',
+            '/contents/Corty/scan-corty/8.webp',
+
           ]
         },
   

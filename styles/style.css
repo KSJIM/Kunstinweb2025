@@ -714,7 +714,7 @@ height: 100%;
   height:flex;
   overflow-x: auto;
   gap: 1vw;
-  padding-bottom: 1vh;
+  
   scrollbar-width: none;
 }
 .section-imageGroup.carousel::-webkit-scrollbar {
