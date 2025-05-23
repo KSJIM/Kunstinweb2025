@@ -192,7 +192,8 @@ sections: [
           type: 'imageGroup',
           layout: 'carousel',
           images: [
-            '/contents/Corty/fabrication/laser.webp','/contents/Corty/fabrication/laser2.webp','/contents/Corty/fabrication/assemble.webp'
+            '/contents/Corty/fabrication/laser.webp','/contents/Corty/fabrication/laser2.webp','/contents/Corty/fabrication/assemble.webp',
+            '/contents/Corty/fabrication/assemble1.webp','/contents/Corty/fabrication/assemble2.webp'
           ]
         },
 
