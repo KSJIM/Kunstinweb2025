@@ -52,6 +52,14 @@ const projects = [
     image0: '/mainpics/Calityp0.webp',
     image1: '/mainpics/Calityp1.webp',
   },
+
+  {
+    id: 'Munas',
+    title: 'Munas',
+    image0: '/mainpics/munas6.webp',
+    image1: '/mainpics/Munas5.webp',
+  },
+
   {
     id: 'L-Shufa',
     title: 'L-Shufa',
@@ -124,6 +132,7 @@ const openDetail = (project) => {
 //每个项目对应的颜色
 const projectColors = {
   'Corty':'#36292f',
+  'Munas':'#12aa9c',
   'L-Shufa': '#cdd1d3',
   '70SS':'#8076a3',
   'B8': '#9e9d08',
