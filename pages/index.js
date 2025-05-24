@@ -49,8 +49,8 @@ const projects = [
   {
     id: 'Corty',
     title: 'Corty',
-    image0: '/mainpics/Calityp0.webp',
-    image1: '/mainpics/Calityp1.webp',
+    image0: '/mainpics/corty0.webp',
+    image1: '/mainpics/corty1.webp',
   },
 
   {
