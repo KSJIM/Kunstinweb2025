@@ -56,7 +56,7 @@ const projects = [
   {
     id: 'Munas',
     title: 'Munas',
-    image0: '/mainpics/munas0.webp',
+    image0: '/mainpics/Munas0.webp',
     image1: '/mainpics/Munas5.webp',
   },
 
