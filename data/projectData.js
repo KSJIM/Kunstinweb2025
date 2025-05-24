@@ -96,7 +96,7 @@ sections: [
 
 
       
-      {
+      /*{
         label: 'IDEATION',
         content: 'Through L-system experimentation, I explored a range of visual outputs, using irregular loops and flowing curves as the basic units for generative pattern creation.',
       },
@@ -120,7 +120,7 @@ sections: [
         type: 'imageGroup',
         layout: 'grid-2x2',
         images: ['/contents/L-shufa/l1.webp', '/contents/L-shufa/l2.webp','/contents/L-shufa/l3.webp','/contents/L-shufa/l4.webp']
-      }
+      }*/
 
 
    
