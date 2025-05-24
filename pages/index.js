@@ -56,7 +56,7 @@ const projects = [
   {
     id: 'Munas',
     title: 'Munas',
-    image0: '/mainpics/munas6.webp',
+    image0: '/mainpics/munas0.webp',
     image1: '/mainpics/Munas5.webp',
   },
 
@@ -516,9 +516,9 @@ activeColor;
   }}
 >
   {Object.entries({
-    'Computational Art and Design': projects.slice(0, 3),
-    'Industrial and Product Design': projects.slice(3,6),
-    'Creative Coding': projects.slice(6),
+    'Computational Art and Design': projects.slice(0, 4),
+    'Industrial and Product Design': projects.slice(4,7),
+    'Creative Coding': projects.slice(7),
     // 后续你可继续添加分类
   }).map(([category, categoryProjects]) => (
     <div key={category} ref={categoryRefs[category]}>

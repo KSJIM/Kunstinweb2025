@@ -68,7 +68,7 @@ sections: [
 
     'Munas': {
       title: 'Munas',
-      mainImage: '/contents/Munas/1.webp',
+      mainImage: '/contents/Munas/02.webp',
       
       info: [
         { label: 'Project', value: 'Munas' },
@@ -84,12 +84,14 @@ sections: [
 sections: [
   {
     label: 'INSPIRATION',
-    content: 'This project is inspired by the poetic imagery of traditional Chinese landscape painting and the abstract composition of flowing curves.',
+    content: 'Inspired by the aesthetics, structural logic, and ornamental motifs of classical architecture—especially Muqarnas—this project is rooted in the tension between repetition and random variation.',
   },
   
     {type: 'imageGroup',
         layout: 'carousel',
-        images: ['/contents/L-shufa/i1.webp', '/contents/L-shufa/i2.webp','/contents/L-shufa/i3.webp','/contents/L-shufa/i4.webp']
+        images: ['/contents/Munas/inspiration/1.webp', '/contents/Munas/inspiration/2.webp', '/contents/Munas/inspiration/5.webp',
+          '/contents/Munas/inspiration/3.webp', '/contents/Munas/inspiration/4.webp', 
+        ]
       },
 
 
