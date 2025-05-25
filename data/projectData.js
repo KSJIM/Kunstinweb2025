@@ -96,34 +96,79 @@ sections: [
 
 
       
-      /*{
+      {
         label: 'IDEATION',
-        content: 'Through L-system experimentation, I explored a range of visual outputs, using irregular loops and flowing curves as the basic units for generative pattern creation.',
+        content: 'Drawing from selected elements across different architectural sources, we experimented with a range of initial studies and expressive forms',
       },
   
 
     {type: 'imageGroup',
-        layout: 'grid-2x2',
-        images: ['/contents/L-shufa/l5.webp', '/contents/L-shufa/l6.webp','/contents/L-shufa/l7.webp','/contents/L-shufa/l8.webp']
+        layout: 'carousel',
+        images: ['/contents/Munas/Ideation/3.webp', '/contents/Munas/Ideation/2.webp','/contents/Munas/Ideation/1.webp','/contents/Munas/Ideation/4.webp','/contents/Munas/Ideation/5.webp']
       },
-      {type: 'imageGroup',
-        layout: 'grid-3x2',
-        images: ['/contents/L-shufa/l9.webp', '/contents/L-shufa/l10.webp','/contents/L-shufa/l11.webp','/contents/L-shufa/l12.webp','/contents/L-shufa/l13.webp','/contents/L-shufa/l14.webp']
-      },
+     
 
       {
         label: 'CREATION',
-        content: 'In the final stage, I simulated the effect of a “bamboo forest” by generating patterns through dual-directional drawing, incorporating randomness in both stroke thickness and intensity.',
+        content: 'Grounded in our earlier material and formal trials, we selected the shawl as a fluid, wearable platform to embody the architectural elements—realized through a hybrid fabrication process of laser cutting and 3D printing.',
       },
    
+
+      {
+        type: 'sub',
+        content:' We proceeded with sketching, laser cutting, and body fitting tests, and after three iterations, finalized the design pattern.'
+      },
+
+  
     {
         type: 'imageGroup',
-        layout: 'grid-2x2',
-        images: ['/contents/L-shufa/l1.webp', '/contents/L-shufa/l2.webp','/contents/L-shufa/l3.webp','/contents/L-shufa/l4.webp']
-      }*/
+        layout: 'carousel',
+        images: ['/contents/Munas/creation/3.webp','/contents/Munas/creation/1.webp','/contents/Munas/creation/2.webp', ]
+      },
+
+     
+
+      {
+        type: 'sub',
+        content:'We then divided the shawl into 6 parts and used Kangaroo2 to run dynamic simulations on the curves of each part, generating more fluid and organic shapes.Using these forms as the base for each region, we experimented with applying 3 different experimental outcomes to different areas, balancing visual aesthetics with the necessary elasticity and comfort for wearability. This process helped us finalize the placement of each design element.'
+      },
 
 
-   
+      {
+        type: 'imageGroup',
+        layout: 'carousel',
+        images: ['/contents/Munas/creation/4.webp','/contents/Munas/creation/5.webp','/contents/Munas/creation/6.webp', 
+          '/contents/Munas/creation/7.webp','/contents/Munas/creation/8.webp','/contents/Munas/creation/9.webp', 
+        ]
+      },
+
+      {
+        type: 'sub',
+        content:'Based on our earlier tests, we selected a mesh fabric with moderate porosity for 3D printing directly onto fabric. To achieve a textile-like feel with varying gloss from different angles, we used multicolor filament. The six sections were printed separately on the Prusa XL, pausing at the third layer to place and tape down the fabric.'
+      },
+
+      {
+        type: 'imageGroup',
+        layout: 'carousel',
+        images: ['/contents/Munas/creation/9.webp','/contents/Munas/creation/10.webp','/contents/Munas/creation/11.webp', 
+          
+        ]
+      },
+
+      {
+        type: 'sub',
+        content:'After printing, we hand-sewed each completed piece onto the laser-cut shawl base to assemble the final wearable structure.'
+      },
+
+      {
+        type: 'imageGroup',
+        layout: 'carousel',
+        images: ['/contents/Munas/creation/12.webp','/contents/Munas/creation/13.webp','/contents/Munas/creation/14.webp', 
+          
+        ]
+      },
+
+
   ],
       
 
@@ -284,8 +329,14 @@ sections: [
           label: 'EXHIBITION',
           content: 'At the 2025 ATLAS Institute EXPO, CORTY reached its final form through a participatory installation involving all exhibition visitors. The full set of 26 letter stamps was laid out on custom "curve bases", accompanied by a seaweed-green ink pad. Audiences were invited to co-create—freely stamping and composing on the bases or on white paper, turning the space into an evolving field of collective typography.',
         },
-
-
+        {
+          type: 'imageGroup',
+          layout: 'grid-2x2',
+          images: [
+            '/contents/Corty/exhibition/s2.webp','/contents/Corty/exhibition/s1.webp',
+          ]
+        },
+       
 
         {
           type: 'sub',
