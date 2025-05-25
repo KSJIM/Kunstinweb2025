@@ -181,6 +181,19 @@ export default function Home() {
   }, []);
 
 
+
+  //移动端返回键
+
+  const [mobileBackColor, setMobileBackColor] = useState('#111'); // 默认值
+
+useEffect(() => {
+  if (showDetail && isMobile) {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    setMobileBackColor(randomColor);
+  }
+}, [showDetail, isMobile]);
+
+
 //项目分类
 
 
@@ -378,15 +391,7 @@ activeColor;
   const closeDetail = () => {
     setShowDetail(false);
     setActiveProject(null);
-    setTimeout(() => {
-      const element = document.querySelector(`[data-project="${project}"]`);
-      if (element && mainRef.current) {
-        mainRef.current.scrollTo({
-          top: element.offsetTop,
-          behavior: 'smooth',
-        });
-      }
-    }, 100);
+  
   };
 
  
@@ -568,7 +573,16 @@ activeColor;
       {/* === Detail Section === */}
 
 
-     
+      {isMobile && showDetail && (
+  <div
+    className="mobile-back-bar"
+    onClick={closeDetail}
+    style={{ backgroundColor: mobileBackColor }}
+  >
+    PROJECTS
+  </div>
+)}
+
         
       <div className="detail">
   {renderProjectContent()}

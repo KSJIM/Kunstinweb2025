@@ -921,3 +921,34 @@ height: 100%;
     margin-bottom: 4vw;
   }
 
+ /* 返回键 */
+ 
+    .mobile-back-bar {
+      display: none;
+      background-color: #111; /* 改由 JS 控制背景色 */
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 1.3rem;
+      font-family: 'DrukWide';
+      cursor: pointer;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      transition: background-color 0.3s ease;
+    }
+    
+    .mobile-back-bar:hover {
+      background-color: black;
+    }
+    
+  
+  /* ✅ 只在移动端显示 */
+  @media screen and (max-width: 768px) {
+    .mobile-back-bar {
+      display: block;
+    }
+  }
+  
+
