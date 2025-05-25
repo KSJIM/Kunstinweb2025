@@ -560,7 +560,7 @@ height: 100%;
   margin-top: 2vh;
   margin-bottom: 16%;
   padding-bottom: 8%;
-  border-bottom:  #777 dotted 2px;
+  border-bottom:  #777 dotted 1px;
 }
 
 /* 直接用于 label 和 value */
