@@ -389,10 +389,21 @@ activeColor;
 
 
   const closeDetail = () => {
+    const scrollTarget = activeProject; // 缓存当前项目
     setShowDetail(false);
     setActiveProject(null);
   
+    setTimeout(() => {
+      const element = projectRefs.current[scrollTarget];
+      if (element && mainRef.current) {
+        mainRef.current.scrollTo({
+          top: element.offsetTop - mainRef.current.clientHeight * 0.05,
+          behavior: 'smooth',
+        });
+      }
+    }, 1000); // 让动画先关闭 detail 再 scroll
   };
+  
 
  
   return (

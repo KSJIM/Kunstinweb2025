@@ -942,7 +942,9 @@ height: 100%;
     .mobile-back-bar:hover {
       background-color: black;
     }
-    
+    .mobile-back-bar:active {
+      opacity: 0.93;
+    }
   
   /* ✅ 只在移动端显示 */
   @media screen and (max-width: 768px) {
