@@ -470,7 +470,7 @@ activeColor;
       I’m also currently enrolled in the MS in Human-Computer Interaction at the ATLAS Institute. 
       
       <a
-        href="/Resume/Resume Yekun Xu 2025.6"
+        href="/Resume/Resume-YekunXu.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="resume-link"
