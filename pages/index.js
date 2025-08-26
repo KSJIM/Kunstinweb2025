@@ -470,7 +470,7 @@ activeColor;
       I’m also currently enrolled in the MS in Human-Computer Interaction at the ATLAS Institute. 
       
       <a
-        href="/Resume/Resume-YekunXu2025.6.pdf"
+        href="/Resume/Resume-YekunXu2025.8.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="resume-link"
@@ -502,7 +502,7 @@ activeColor;
           )}
           {activeMenu === 'OTHERS' && (
   <div className="photo-gallery">
-    {Array.from({ length: 6 }, (_, i) => (
+    {Array.from({ length: 7 }, (_, i) => (
       <img
         key={i}
         src={`/otherpics/photos/${i + 1}.webp`}
