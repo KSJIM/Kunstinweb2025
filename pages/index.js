@@ -502,7 +502,7 @@ activeColor;
           )}
           {activeMenu === 'OTHERS' && (
   <div className="photo-gallery">
-    {Array.from({ length: 10 }, (_, i) => (
+    {Array.from({ length: 8 }, (_, i) => (
       <img
         key={i}
         src={`/otherpics/photos/${i + 1}.webp`}
