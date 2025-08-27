@@ -293,6 +293,12 @@ min-height: 0; /* ✅ 关键补充，Chrome 需要这个才能使子项 scroll �
   align-self: left;      /* ✅ 保证文字在 bar 底部 */
 }
 
+.sidebar-bottom a {
+  font-family: 'ITCAvantGardeStd-Md'; 
+  color:#ccccd6;
+  font-size: 0.9em;
+  
+}
 
 
 .sidebar-spacer {
