@@ -496,7 +496,7 @@ activeColor;
 />
 <div className="sidebar-spacer" />
 
-<a href="https://www.instagram.com/k8ei7/" target="_blank">INSTAGRAM</a>
+<a href="https://www.instagram.com/k8ei7/" target="_blank">Instagram</a>
 <p>E-mail: kunstinjim@gmail.com</p>
 </div>
             

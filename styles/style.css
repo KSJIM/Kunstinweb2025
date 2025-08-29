@@ -291,12 +291,14 @@ min-height: 0; /* ✅ 关键补充，Chrome 需要这个才能使子项 scroll �
   margin: 0;
   line-height: 1.4;
   align-self: left;      /* ✅ 保证文字在 bar 底部 */
+  
 }
 
 .sidebar-bottom a {
   font-family: 'ITCAvantGardeStd-Md'; 
   color:#ccccd6;
   font-size: 0.9em;
+  
   
 }
 
@@ -312,7 +314,7 @@ min-height: 0; /* ✅ 关键补充，Chrome 需要这个才能使子项 scroll �
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1em;
+  gap: 0.3em;
   flex: 1
 }
 
