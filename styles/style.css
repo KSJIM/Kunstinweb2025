@@ -877,12 +877,12 @@ height: 100%;
     font-size: 4vw;     /* 文字放大 */
     text-align: left;
   }
+
   .sidebar-bottom a {
     font-size: 4vw; /* 也可以用和 p 一样的 4vw */
     text-align: left;
-    
+   
   }
-}
 
   .menu-link {
     font-size: 6vw;
